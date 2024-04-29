@@ -62,6 +62,9 @@ class LoginPage extends StatelessWidget {
             decoration: InputDecoration(
               prefixIcon: Icon(icone, color: Colors.pink[200]),
               labelText: hintText,
+              labelStyle: TextStyle(
+                color: Colors.black38, // Cor padrão da label
+              ),
               hintStyle: TextStyle(color: Colors.black38),
               border: OutlineInputBorder(),
               enabledBorder: OutlineInputBorder(
@@ -70,12 +73,16 @@ class LoginPage extends StatelessWidget {
               focusedBorder: OutlineInputBorder(
                 borderSide: BorderSide(color: Colors.pink, width: 1),
               ),
+              floatingLabelStyle: TextStyle(
+                color: Colors.pink, // Cor da label quando o TextField está focado
+              ),
             ),
           ),
         ],
       ),
     );
   }
+
 
   Widget _botoesFormulario(BuildContext context) {
     return Container(
